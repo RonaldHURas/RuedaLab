@@ -16,6 +16,7 @@ export interface Bike {
   };
   features: string[];
   inStock: boolean;
+  superOffer?: boolean; // Indica si es una super oferta especial
 }
 
 export interface Category {
@@ -134,7 +135,7 @@ const baseBikes: Bike[] = [
     id: 1,
     name: "Cannondale Scalpel Carbon 3 Mammoth Edition",
     originalPrice: 4999,
-    discount: 40,
+    discount: 46,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/585946_28052025124032.jpg",
     description: "La bicicleta de XC definitiva. Suspensión revolucionaria, geometría agresiva y peso pluma para volar en las subidas y destruir las bajadas.",
@@ -147,13 +148,14 @@ const baseBikes: Bike[] = [
       weight: "10.8 kg"
     },
     features: ["Lefty Ocho", "Cuadro Carbono", "Conectividad App", "FlexPivot"],
-    inStock: true
+    inStock: true,
+    superOffer: true
   },
   {
     id: 2,
     name: "Specialized S-Works Epic World Cup",
     originalPrice: 8248.75,
-    discount: 40,
+    discount: 44,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/559247_06072023104828.jpg",
     description: "Diseñada para ganar Copas del Mundo. La Epic redefine la velocidad en cross country con una eficiencia inigualable.",
@@ -166,7 +168,8 @@ const baseBikes: Bike[] = [
       weight: "9.3 kg"
     },
     features: ["Brain Technology", "Transmisión Wireless", "Ruedas Roval Control SL", "Cockpit integrado"],
-    inStock: true
+    inStock: true,
+    superOffer: true
   },
   {
     id: 3,
@@ -305,7 +308,7 @@ const baseBikes: Bike[] = [
     id: 10,
     name: "Specialized Epic 8 Comp",
     originalPrice: 5200,
-    discount: 40,
+    discount: 46,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/570835_1303202481756.jpg",
     description: "La evolución de la Epic. Más capaz, más eficiente y más ligera que nunca.",
@@ -318,7 +321,8 @@ const baseBikes: Bike[] = [
       weight: "10.9 kg"
     },
     features: ["SWAT 4.0", "Geometría progresiva", "Transmisión T-Type", "Suspension Flight Attendant Ready"],
-    inStock: true
+    inStock: true,
+    superOffer: true
   },
 
   // --- TRAIL y ENDURO ---
@@ -345,7 +349,7 @@ const baseBikes: Bike[] = [
     id: 12,
     name: "Specialized Stumpjumper 15 Comp",
     originalPrice: 6500,
-    discount: 40,
+    discount: 45,
     category: "trail",
     image: "https://cdn.mammothbikes.com/product/Large/576142_1609202475314.jpg",
     description: "La bici de trail por excelencia. Suspensión ajustable y manejo intuitivo en cualquier sendero.",
@@ -358,13 +362,14 @@ const baseBikes: Bike[] = [
       weight: "13.5 kg"
     },
     features: ["SWAT Door", "Geometría ajustable", "Rider-First Engineered", "Silencioso de cadena"],
-    inStock: true
+    inStock: true,
+    superOffer: true
   },
   {
     id: 13,
     name: "Specialized Enduro Pro",
     originalPrice: 9500,
-    discount: 40,
+    discount: 43,
     category: "enduro",
     image: "https://cdn.mammothbikes.com/product/Large/589356_1507202594822.jpg",
     description: "Una bestia de largo recorrido que sube con eficacia pero baja como una bici de DH.",
@@ -377,7 +382,8 @@ const baseBikes: Bike[] = [
       weight: "14.8 kg"
     },
     features: ["Estilo DH", "Anclajes SWAT", "Transmisión electrónica", "Suspension 170mm"],
-    inStock: true
+    inStock: true,
+    superOffer: true
   },
   {
     id: 14,
@@ -789,7 +795,7 @@ export const faqs: FAQ[] = [
   {
     id: 1,
     question: "¿Tienen tienda física en España?",
-    answer: "Sí, contamos con varias tiendas Mammoth físicas donde puedes ver los modelos y recoger tu pedido."
+    answer: "No contamos con tienda física. Tenemos un almacén en Santander desde donde distribuimos a toda España con envío rápido y seguro."
   },
   {
     id: 2,

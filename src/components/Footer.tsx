@@ -148,8 +148,19 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
+        {/* Kit Digital Banner - Full Width */}
+        <div className="pt-8 pb-6 border-t border-gray-800">
+          <div className="flex justify-center items-center">
+            <img 
+              src="/kit-digital-banner.png" 
+              alt="Financiado por Kit Digital - Next Generation EU" 
+              className="w-full max-w-5xl h-auto opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-800">
+        <div className="pt-6 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
               © {currentYear} RUEDALAB. Todos los derechos reservados.
