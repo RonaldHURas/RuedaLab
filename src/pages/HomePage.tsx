@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
                 <div 
                   key={bike.id} 
                   className="group cursor-pointer bg-white dark:bg-gray-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-4 border-rose-500"
-                  onClick={() => navigate('/catalogo')}
+                  onClick={() => navigate(`/producto/${bike.id}`)}
                 >
                   <div className="relative overflow-hidden aspect-[4/3]">
                     <img 
@@ -130,7 +130,7 @@ const HomePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {regularFeatured.map(bike => (
-              <div key={bike.id} className="group cursor-pointer bg-white dark:bg-gray-800 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300" onClick={() => navigate('/catalogo')}>
+              <div key={bike.id} className="group cursor-pointer bg-white dark:bg-gray-800 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300" onClick={() => navigate(`/producto/${bike.id}`)}>
                 <div className="relative overflow-hidden aspect-[4/3] mb-4">
                   <img 
                     src={bike.image} 

@@ -5,6 +5,7 @@ export interface Bike {
   discount: number;
   category: string;
   image: string;
+  images?: string[]; // Imágenes adicionales para la galería del producto
   description: string;
   specs: {
     suspension?: string;
@@ -138,6 +139,12 @@ const baseBikes: Bike[] = [
     discount: 46,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/585946_28052025124032.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/585946_1_28052025124151.jpg",
+      "https://cdn.mammothbikes.com/product/Large/585946_2_28052025124152.jpg",
+      "https://cdn.mammothbikes.com/product/Large/585946_3_28052025124152.jpg",
+      "https://cdn.mammothbikes.com/product/Large/585946_6_28052025124154.jpg"
+    ],
     description: "La bicicleta de XC definitiva. Suspensión revolucionaria, geometría agresiva y peso pluma para volar en las subidas y destruir las bajadas.",
     specs: {
       suspension: "Lefty Ocho 100mm",
@@ -158,6 +165,12 @@ const baseBikes: Bike[] = [
     discount: 44,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/559247_06072023104828.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/559247_1_06072023104829.jpg",
+      "https://cdn.mammothbikes.com/product/Large/559247_2_06072023104829.jpg",
+      "https://cdn.mammothbikes.com/product/Large/559247_7_06072023104832.jpg",
+      "https://cdn.mammothbikes.com/product/Large/559247_6_06072023104831.jpg"
+    ],
     description: "Diseñada para ganar Copas del Mundo. La Epic redefine la velocidad en cross country con una eficiencia inigualable.",
     specs: {
       suspension: "RockShox SID SL Ultimate",
@@ -178,6 +191,11 @@ const baseBikes: Bike[] = [
     discount: 60,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/557823_19092023140709.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/557823_1_18082025125434.jpg",
+      "https://cdn.mammothbikes.com/product/Large/290173_2_18082025125535.jpg",
+      "https://cdn.mammothbikes.com/product/Large/557823_3_18082025125639.jpg"
+    ],
     description: "Geometría inspirada en la competición al más alto nivel. Una rígida de carbono que ofrece velocidad y control.",
     specs: {
       suspension: "RockShox Judy Silver 100mm",
@@ -197,6 +215,10 @@ const baseBikes: Bike[] = [
     discount: 40,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/573434_1505202495741.jpg",
+    images: [
+      "https://www.orbea.com/img/products/product/over/large/R005TTCC-KK-FRONT-MX_24_XC_over.jpg",
+      "https://www.orbea.com/img/products/product/over/large/R005TTCC-KK-BACK-MX_24_XC_over.jpg",
+    ],
     description: "La puerta de entrada perfecta al mundo del MTB. Fiable, divertida y capaz.",
     specs: {
       suspension: "SR Suntour XCR 100mm",
@@ -216,6 +238,11 @@ const baseBikes: Bike[] = [
     discount: 40,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/583602_01042025165112.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/583602_1_01042025165156.jpg",
+      "https://cdn.mammothbikes.com/product/Large/583602_3_01042025165249.jpg",
+      "https://cdn.mammothbikes.com/product/Large/583602_4_01042025165305.jpg"
+    ],
     description: "El cuadro de aluminio más ligero y capaz del mercado. Tecnología D'Aluisio Smartweld.",
     specs: {
       suspension: "RockShox Judy Gold",
@@ -235,6 +262,11 @@ const baseBikes: Bike[] = [
     discount: 60,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/597271_07012026100845.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/597271_1_07012026100945.jpg",
+      "https://cdn.mammothbikes.com/product/Large/597271_2_07012026100956.jpg",
+      "https://cdn.mammothbikes.com/product/Large/597271_4_07012026101211.jpg"
+    ],
     description: "Rendimiento y valor inigualables. Horquilla de aire y frenos potentes para mejorar tu técnica.",
     specs: {
       suspension: "RockShox Judy Air",
@@ -254,6 +286,10 @@ const baseBikes: Bike[] = [
     discount: 60,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/cp_13_845952_10092025_1.jpg",
+    images: [
+      "https://www.orbea.com/img/products/product/over/large/T207TTCC-RF-BACK-ONNA_29_20_over.jpg",
+      "https://www.orbea.com/img/products/product/over/large/T207TTCC-RF-FRONT-ONNA_29_20_over.jpg",
+    ],
     description: "Diseñada para ciclistas que quieren conquistar la montaña con seguridad y control.",
     specs: {
       suspension: "SR Suntour XCR Air 100mm",
@@ -273,6 +309,11 @@ const baseBikes: Bike[] = [
     discount: 40,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/567695_08042024122828.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/567695_1_08042024122828.jpg",
+      "https://cdn.mammothbikes.com/product/Large/567695_2_08042024122841.jpg",
+      "https://cdn.mammothbikes.com/product/Large/567695-4_08042024122842.jpg"
+    ],
     description: "La leyenda continúa. Equipada con la inconfundible horquilla Lefty Ocho para una precisión quirúrgica.",
     specs: {
       suspension: "Lefty Ocho 100mm",
@@ -292,6 +333,9 @@ const baseBikes: Bike[] = [
     discount: 40,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/578833_28012025133529.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/578833_1_28012025133530.jpg",
+    ],
     description: "Amortiguador integrado, geometría ajustable y construcción de carbono ligera. Una bici del futuro.",
     specs: {
       suspension: "FOX 34 SC Float 120mm",
@@ -311,6 +355,11 @@ const baseBikes: Bike[] = [
     discount: 46,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/570835_1303202481756.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/570835_1_1303202481757.jpg",
+      "https://cdn.mammothbikes.com/product/Large/570835_2_1303202481757.jpg",
+      "https://cdn.mammothbikes.com/product/Large/570835_3_1303202481822.jpg"
+    ],
     description: "La evolución de la Epic. Más capaz, más eficiente y más ligera que nunca.",
     specs: {
       suspension: "RockShox SID Select 120mm",
@@ -333,6 +382,11 @@ const baseBikes: Bike[] = [
     discount: 60,
     category: "trail",
     image: "https://cdn.mammothbikes.com/product/Large/595319_11122025121554.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/595319_1_11122025121615.jpg",
+      "https://cdn.mammothbikes.com/product/Large/595319_3_11122025121818.jpg",
+      "https://cdn.mammothbikes.com/product/Large/595319_5_11122025122305.jpg"
+    ],
     description: "Una rígida para puristas del trail. Simple, robusta y extremadamente divertida.",
     specs: {
       suspension: "RockShox 35 Silver 130mm",
@@ -352,6 +406,11 @@ const baseBikes: Bike[] = [
     discount: 45,
     category: "trail",
     image: "https://cdn.mammothbikes.com/product/Large/576142_1609202475314.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/576142_1_1609202475315.jpg",
+      "https://cdn.mammothbikes.com/product/Large/576142_2_1609202475316.jpg",
+      "https://cdn.mammothbikes.com/product/Large/576142_3_1609202475316.jpg"
+    ],
     description: "La bici de trail por excelencia. Suspensión ajustable y manejo intuitivo en cualquier sendero.",
     specs: {
       suspension: "FOX FLOAT 34 Rhythm 140mm",
@@ -372,6 +431,11 @@ const baseBikes: Bike[] = [
     discount: 43,
     category: "enduro",
     image: "https://cdn.mammothbikes.com/product/Large/589356_1507202594822.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/589356_1_1507202594906.jpg",
+      "https://cdn.mammothbikes.com/product/Large/589356_2_1507202594916.jpg",
+      "https://cdn.mammothbikes.com/product/Large/589356_5_1507202595012.jpg"
+    ],
     description: "Una bestia de largo recorrido que sube con eficacia pero baja como una bici de DH.",
     specs: {
       suspension: "RockShox ZEB Ultimate 170mm",
@@ -406,11 +470,16 @@ const baseBikes: Bike[] = [
   },
   {
     id: 15,
-    name: "Trek Slash 8",
+    name: "Trek Slash 8 Gen 6",
     originalPrice: 3799,
     discount: 40,
     category: "enduro",
-    image: "https://cdn.mammothbikes.com/product/Large/595319_11122025121554.jpg",
+    image: "https://cdn.mammothbikes.com/product/Large/595309_17102025112957.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/595309_2_17102025112958.jpg",
+      "https://cdn.mammothbikes.com/product/Large/595309_4_17102025112959.jpg",
+      "https://cdn.mammothbikes.com/product/Large/595309_10_17102025113130.jpg"
+    ],
     description: "Una enduro de aluminio indestructible. Gran recorrido, ruedas grandes y actitud agresiva.",
     specs: {
       suspension: "RockShox ZEB Select 170mm",
@@ -432,6 +501,11 @@ const baseBikes: Bike[] = [
     discount: 40,
     category: "gravel",
     image: "https://cdn.mammothbikes.com/product/Large/79655_30012026111406.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/601177_1_30012026111509.jpg",
+      "https://cdn.mammothbikes.com/product/Large/601177_4_30012026111510.jpg",
+      "https://cdn.mammothbikes.com/product/Large/601177_2_30012026111510.jpg"
+    ],
     description: "Versatilidad sin límites. Una gravel de aluminio ligera y resistente para descubrir nuevos caminos, edición especial.",
     specs: {
       suspension: "Rígida Carbono",
@@ -451,6 +525,9 @@ const baseBikes: Bike[] = [
     discount: 60,
     category: "gravel",
     image: "https://cdn.mammothbikes.com/product/Large/512575_03012023132128.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/512575_1_29052025101341.jpg",
+    ],
     description: "La gravel más capaz y cómoda. Con suspensión Kingpin revolucionaria para mayor confort y tracción.",
     specs: {
       suspension: "Sistema Kingpin",
@@ -488,7 +565,11 @@ const baseBikes: Bike[] = [
     originalPrice: 5499,
     discount: 40,
     category: "gravel",
-    image: "https://cdn.mammothbikes.com/product/Large/cp_13_845994_22092025_1.jpg",
+    image: "https://www.orbea.com/img/products/product/over/large/T141TTCC-GP-SIDE-TERRA_M31eTEAM_1X_over.jpg",
+    images: [
+      "https://www.orbea.com/img/products/product/over/large/T142TTCC-GP-FRONT-TERRA_M20iTEAM_over.jpg",
+      "https://www.orbea.com/img/products/product/over/large/T142TTCC-GP-BACK-TERRA_M20iTEAM_over.jpg",
+    ],
     description: "Diseñada por y para el gravel. Rápida en asfalto, capaz en tierra y cómoda siempre.",
     specs: {
       suspension: "Rígida Carbono",
@@ -508,6 +589,11 @@ const baseBikes: Bike[] = [
     discount: 60,
     category: "gravel",
     image: "https://cdn.mammothbikes.com/product/Large/554890_27052024123510.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/554890_1_27052024123511.jpg",
+      "https://cdn.mammothbikes.com/product/Large/554890_2_27052024123512.jpg",
+      "https://cdn.mammothbikes.com/product/Large/554890_5_27052024123514.jpg"
+    ],
     description: "Simplicidad y rendimiento 1x12. Lista para cualquier aventura off-road que imagines.",
     specs: {
       suspension: "Sistema Kingpin",
@@ -529,6 +615,11 @@ const baseBikes: Bike[] = [
     discount: 40,
     category: "road",
     image: "https://cdn.mammothbikes.com/product/Large/561060_1807202395243.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/561060_1_1807202395244.jpg",
+      "https://cdn.mammothbikes.com/product/Large/561060_2_1807202395245.jpg",
+      "https://cdn.mammothbikes.com/product/Large/561060_3_1807202395245.jpg"
+    ],
     description: "Una bicicleta para gobernarlas a todas. Aerodinámica, ligereza y calidad de conducción en equilibrio perfecto.",
     specs: {
       suspension: "Rígida",
@@ -567,6 +658,9 @@ const baseBikes: Bike[] = [
     discount: 60,
     category: "road",
     image: "https://cdn.mammothbikes.com/product/Large/cp_1_847383_15092025_1.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/cp_1_847424_15092025_1.jpg",
+    ],
     description: "Comodidad clásica con rendimiento moderno. Perfecta para largas horas en el sillín.",
     specs: {
       suspension: "Rígida",
@@ -585,7 +679,12 @@ const baseBikes: Bike[] = [
     originalPrice: 3999,
     discount: 40,
     category: "road",
-    image: "https://cdn.mammothbikes.com/product/Large/596824_15012026123256.jpg",
+    image: "https://images2.giant-bicycles.com/b_white%2Cc_pad%2Ch_850%2Cq_80/ikdwdu7tpuq4j5xeemtv/MY25LangmaAdvanced0_ColorAInterstellar.jpg",
+    images: [
+      "https://images2.giant-bicycles.com/b_white%2Cc_pad%2Ch_2000%2Cq_80/vfl45rcfddqi7f0cineq/MY25LangmaAdvanced0_ColorAInterstellar-Front.jpg",
+      "https://images2.giant-bicycles.com/b_white%2Cc_pad%2Ch_2000%2Cq_80/fztvycml5ezymqxbpv7z/MY25LangmaAdvanced0_ColorAInterstellar-D2.jpg",
+      "https://images2.giant-bicycles.com/b_white%2Cc_pad%2Ch_2000%2Cq_80/fgewkwfj3s1pkzef8zpl/MY25LangmaAdvanced0_ColorAInterstellar-D3.jpg"
+    ],
     description: "Diseñada específicamente para mujeres. Eficiente, ágil y preparada para coronar cualquier puerto.",
     specs: {
       suspension: "Rígida",
@@ -605,6 +704,11 @@ const baseBikes: Bike[] = [
     discount: 40,
     category: "road",
     image: "https://cdn.mammothbikes.com/product/Large/576155_20112024111940.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/576155_1_20112024111940.jpg",
+      "https://cdn.mammothbikes.com/product/Large/576155_2_20112024111941.jpg",
+      "https://cdn.mammothbikes.com/product/Large/576155_3_20112024111941.jpg"
+    ],
     description: "Lo último en tecnología de bicicletas. La bici más rápida del mundo, ahora aún mejor.",
     specs: {
       suspension: "Rígida",
@@ -625,7 +729,12 @@ const baseBikes: Bike[] = [
     originalPrice: 1750,
     discount: 60,
     category: "urban",
-    image: "https://cdn.mammothbikes.com/product/Large/595319_11122025121554.jpg",
+    image: "https://cdn.mammothbikes.com/product/Large/cp_1_481756_28022025.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/cp_1_481756_02062025_2.jpg",
+      "https://cdn.mammothbikes.com/product/Large/cp_1_481756_02062025_3.jpg",
+      "https://cdn.mammothbikes.com/product/Large/cp_1_481756_02062025_4.jpg"
+    ],
     description: "Tu compañera perfecta para la ciudad y más allá. Cómoda, capaz y confiable.",
     specs: {
       suspension: "Future Shock 1.5",
@@ -644,7 +753,10 @@ const baseBikes: Bike[] = [
     originalPrice: 1099,
     discount: 40,
     category: "urban",
-    image: "https://cdn.mammothbikes.com/product/Large/589356_1507202594822.jpg",
+    image: "https://cdn.mammothbikes.com/product/Large/479306_04112022125221.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/479713_04112022125117.jpg",
+    ],
     description: "Estilo y funcionalidad. Una bici urbana elegante con componentes de bajo mantenimiento.",
     specs: {
       suspension: "Rígida",
@@ -657,25 +769,6 @@ const baseBikes: Bike[] = [
     features: ["Dinamo integrada", "Luces incluidas", "Guardabarros serie", "Diseño minimalista"],
     inStock: true
   },
-  {
-    id: 28,
-    name: "Specialized Sirrus X 2.0",
-    originalPrice: 749,
-    discount: 40,
-    category: "urban",
-    image: "https://cdn.mammothbikes.com/product/Large/cp_1_481756_28022025.jpg",
-    description: "Sencillez y eficiencia. Frenos de disco y transmisión monopto para moverte sin complicaciones.",
-    specs: {
-      suspension: "Rígida Acero",
-      frame: "A1 Premium Aluminum",
-      gears: "MicroSHIFT Advent 8v",
-      brakes: "Promax R878",
-      wheels: "700c",
-      weight: "11.5 kg"
-    },
-    features: ["Cuadro ligero", "Cableado interno", "Puntos de contacto ergonómicos", "Reflectantes"],
-    inStock: true
-  },
 
   // --- Generate more variations for listing filler ---
   {
@@ -684,7 +777,10 @@ const baseBikes: Bike[] = [
     originalPrice: 899,
     discount: 40,
     category: "xc",
-    image: "https://cdn.mammothbikes.com/product/Large/585116_22042025145933.jpg",
+    image: "https://giant-bicycles.com.ar/cdn/shop/files/1095010224AR.jpg?v=1744288491&width=5000",
+    images: [
+      "https://giant-bicycles.com.ar/cdn/shop/files/1095010424AR.jpg?v=1744288491&width=5000",
+    ],
     description: "Siente el camino con esta rígida de aluminio hecha para aspirantes a ciclistas de singletrack.",
     specs: { suspension: "SXC32-2 RL 100mm", frame: "ALUXX-Grade Aluminum", gears: "Shimano Deore", wheels: "29", weight: "13.2kg" },
     features: ["Geometría equilibrada", "Suspension aire", "Frenos disco"],
@@ -697,6 +793,11 @@ const baseBikes: Bike[] = [
     discount: 60,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/592730_1510202592326.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/592730_1_1510202592326.jpg",
+      "https://cdn.mammothbikes.com/product/Large/592730_2_1510202592341.jpg",
+      "https://cdn.mammothbikes.com/product/Large/592730_3_1510202592342.jpg"
+    ],
     description: "Una bicicleta digna de competición que no te arruinará.",
     specs: { suspension: "RockShox Judy Silver", frame: "Alpha Silver Aluminum", gears: "SRAM SX Eagle", wheels: "29", weight: "13.5kg" },
     features: ["Tija telescópica", "Transmisión 1x12", "Bloqueo TurnKey"],
@@ -709,6 +810,11 @@ const baseBikes: Bike[] = [
     discount: 40,
     category: "urban",
     image: "https://cdn.mammothbikes.com/product/Large/578233_12122024120048.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/578233_1_12122024120048.jpg",
+      "https://cdn.mammothbikes.com/product/Large/578233_2_12122024120049.jpg",
+      "https://cdn.mammothbikes.com/product/Large/578233_3_12122024120049.jpg"
+    ],
     description: "Rendimiento puro a un precio excelente.",
     specs: { suspension: "Fox 32 Rhythm", frame: "Carbono Monocasco", gears: "Shimano SLX", wheels: "29", weight: "12.1kg" },
     features: ["Doble suspensión", "Mando remoto", "Ruedas Boost"],
@@ -721,6 +827,9 @@ const baseBikes: Bike[] = [
     discount: 40,
     category: "xc",
     image: "https://cdn.mammothbikes.com/product/Large/cp_1_821166_24112025_1.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/xlarge/585693_09062025121128.jpg",
+    ],
     description: "No es solo una bici de Enduro, es una mini DH que puedes pedalear.",
     specs: { suspension: "RockShox Zeb Ultimate", frame: "Aluminio 6066", gears: "SRAM GX", wheels: "Mullet", weight: "15.8kg" },
     features: ["VCS Virtual Contact", "Mullet setup", "Robustez extrema"],
@@ -733,6 +842,10 @@ const baseBikes: Bike[] = [
     discount: 60,
     category: "dh",
     image: "https://cdn.mammothbikes.com/product/Large/565134_31102023150644.jpg",
+    images: [
+      "https://static.giant-bicycles.com/Images/360/2023/MY23-Reign-Advanced-Pro-0-Color-A/05_MY23-Reign-Advanced-Pro-0-Color-A.jpg",
+      "https://p.vitalmtb.com/photos/products/33336/photos/1886906/chip.jpg?VersionId=Ay8qB9qGBnMQ_fTuwtqCsupq6WxC.50L",
+    ],
     description: "Desarrollada para las carreras de Enduro y DH más duras del mundo.",
     specs: { suspension: "Fox 38 Factory Live Valve", frame: "Advanced Grade Composite", gears: "Shimano XT", wheels: "29", weight: "14.9kg" },
     features: ["Maestro Suspension", "Live Valve", "Geometría ajustable"],
@@ -740,11 +853,16 @@ const baseBikes: Bike[] = [
   },
   {
     id: 39,
-    name: "Trek Session 8",
+    name: "Trek Session 8 29 GX",
     originalPrice: 5999,
     discount: 60,
     category: "dh",
-    image: "https://cdn.mammothbikes.com/product/Large/592730_1510202592326.jpg",
+    image: "https://cdn.mammothbikes.com/product/Large/592834_11122025124847.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/592834_1_11122025124908.jpg",
+      "https://cdn.mammothbikes.com/product/Large/592834_2_11122025124953.jpg",
+      "https://cdn.mammothbikes.com/product/Large/592834_3_11122025124953.jpg"
+    ],
     description: "Geometría de pivote alto para mantener la velocidad en los terrenos más rotos.",
     specs: { suspension: "RockShox Boxxer Select", frame: "Alpha Platinum", gears: "SRAM GX DH", wheels: "29", weight: "17.5kg" },
     features: ["High Pivot", "Idler Pulley", "Tamaño específico ruedas"],
@@ -756,7 +874,12 @@ const baseBikes: Bike[] = [
     originalPrice: 1894,
     discount: 40,
     category: "urban",
-    image: "https://cdn.mammothbikes.com/product/Large/571026_19032024150247.jpg",
+    image: "https://cdn.mammothbikes.com/product/Large/575744_25112024123407.jpg",
+    images: [
+      "https://cdn.mammothbikes.com/product/Large/575744_1_25112024123407.jpg",
+      "https://cdn.mammothbikes.com/product/Large/575744_2_25112024123408.jpg",
+      "https://cdn.mammothbikes.com/product/Large/575744_3_25112024123408.jpg"
+    ],
     description: "La bicicleta plegable por excelencia. Perfecta para el viajero multimodal.",
     specs: { suspension: "Bloque trasero", frame: "Acero", gears: "6 velocidades", wheels: "16 pulgadas", weight: "12.1kg" },
     features: ["Plegado compacto", "Hecha en Londres", "Indestructible"],
