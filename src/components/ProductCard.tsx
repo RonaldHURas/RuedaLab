@@ -1,20 +1,20 @@
 import React from 'react';
 import { ShoppingCart, Info, Tag, AlertCircle, CheckCircle, Plus } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Bike, WHATSAPP_NUMBER } from '../data/bikes';
 
 interface ProductCardProps {
   bike: Bike;
-  onViewDetails: (bike: Bike) => void;
   onAddToCompare: (bike: Bike) => void;
   isInComparator: boolean;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
   bike,
-  onViewDetails,
   onAddToCompare,
   isInComparator
 }) => {
+  const navigate = useNavigate();
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('es-ES', {
       style: 'currency',
@@ -37,8 +37,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-100 dark:border-gray-800">
-      {/* Image Container */}
+    <div 
+      onClick={() => navigate(`/producto/${bike.id}`)}
+      className="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-100 dark:border-gray-800 cursor-pointer"
+    >      {/* Image Container */}
       <div className="relative overflow-hidden aspect-[4/3]">
         <img
           src={bike.image}
@@ -102,29 +104,29 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2 transition-colors">
           {bike.description}
         </p>
 
         {/* Key Specs */}
         <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
-          <div className="bg-gray-50 p-2 rounded">
-            <p className="text-gray-500">Suspensión</p>
-            <p className="font-semibold text-gray-900">{bike.specs.suspension}</p>
+          <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded transition-colors">
+            <p className="text-gray-500 dark:text-gray-400 transition-colors">Suspensión</p>
+            <p className="font-semibold text-gray-900 dark:text-white transition-colors">{bike.specs.suspension}</p>
           </div>
-          <div className="bg-gray-50 p-2 rounded">
-            <p className="text-gray-500">Velocidades</p>
-            <p className="font-semibold text-gray-900">{bike.specs.gears}</p>
+          <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded transition-colors">
+            <p className="text-gray-500 dark:text-gray-400 transition-colors">Velocidades</p>
+            <p className="font-semibold text-gray-900 dark:text-white transition-colors">{bike.specs.gears}</p>
           </div>
         </div>
 
         {/* Price */}
         <div className="mb-4 space-y-2">
           <div className="flex items-baseline space-x-3">
-            <p className="text-3xl font-bold text-red-600">
+            <p className="text-3xl font-bold text-red-600 dark:text-red-500 transition-colors">
               {formatPrice(calculateDiscountedPrice(bike.originalPrice, bike.discount))}
             </p>
-            <p className="text-lg text-gray-400 line-through">
+            <p className="text-lg text-gray-400 dark:text-gray-500 line-through transition-colors">
               {formatPrice(bike.originalPrice)}
             </p>
           </div>
@@ -133,8 +135,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
         {/* Actions */}
         <div className="flex gap-2">
           <button
-            onClick={() => onViewDetails(bike)}
-            className="flex-1 flex items-center justify-center space-x-2 bg-gray-100 text-gray-700 px-4 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(`/producto/${bike.id}`);
+            }}
+            className="flex-1 flex items-center justify-center space-x-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-medium"
           >
             <Info className="w-4 h-4" />
             <span>Ver más</span>

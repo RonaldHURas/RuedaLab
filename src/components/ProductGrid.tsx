@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { bikes, Bike } from '../data/bikes';
 import ProductCard from './ProductCard';
-import ProductModal from './ProductModal';
 
 interface ProductGridProps {
   selectedCategory: string;
@@ -14,23 +13,10 @@ const ProductGrid: React.FC<ProductGridProps> = ({
   onAddToCompare,
   comparatorBikes
 }) => {
-  const [selectedBike, setSelectedBike] = useState<Bike | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const filteredBikes =
     selectedCategory === 'all'
       ? bikes
       : bikes.filter((bike) => bike.category === selectedCategory);
-
-  const handleViewDetails = (bike: Bike) => {
-    setSelectedBike(bike);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setTimeout(() => setSelectedBike(null), 300);
-  };
 
   const isInComparator = (bikeId: number) => {
     return comparatorBikes.some((bike) => bike.id === bikeId);
@@ -62,7 +48,6 @@ const ProductGrid: React.FC<ProductGridProps> = ({
               <ProductCard
                 key={bike.id}
                 bike={bike}
-                onViewDetails={handleViewDetails}
                 onAddToCompare={onAddToCompare}
                 isInComparator={isInComparator(bike.id)}
               />
@@ -70,14 +55,6 @@ const ProductGrid: React.FC<ProductGridProps> = ({
           </div>
         )}
       </div>
-
-      <ProductModal
-        bike={selectedBike}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-        onAddToCompare={onAddToCompare}
-        isInComparator={selectedBike ? isInComparator(selectedBike.id) : false}
-      />
     </section>
   );
 };
