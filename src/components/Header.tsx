@@ -87,19 +87,19 @@ const Header: React.FC<HeaderProps> = () => {
           {/* Logo */}
           <button
              onClick={goToHomeTop}
-             className="flex items-center space-x-3 group"
+             className="flex items-center space-x-2 sm:space-x-3 group"
           >
             <img
               src="/image.png"
               alt="RUEDALAB"
-              className="w-12 h-12 hover:scale-110 transition-transform"
+              className="w-8 h-8 sm:w-12 sm:h-12 hover:scale-110 transition-transform"
             />
-            <span className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-rose-600 transition-colors">
+            <span className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-rose-600 transition-colors">
               RUEDALAB
             </span>
           </button>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (

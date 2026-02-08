@@ -80,20 +80,19 @@ const Comparator: React.FC<ComparatorProps> = ({ bikes, onRemoveBike }) => {
           </p>
         </div>
 
-        <div className="overflow-x-auto">
-          <div className="inline-block min-w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {bikes.map((bike) => (
-                <div
-                  key={bike.id}
-                  className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-colors"
-                >
+        <div className="overflow-x-auto pb-4 -mx-4 px-4 md:mx-0 md:px-0">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 min-w-full">
+            {bikes.map((bike) => (
+              <div
+                key={bike.id}
+                className="w-[280px] md:w-auto flex-shrink-0 bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-colors"
+              >
                   {/* Header with Remove Button */}
-                  <div className="relative">
+                  <div className="relative aspect-[4/3]">
                     <img
                       src={bike.image}
                       alt={bike.name}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-full object-cover"
                     />
                     <button
                       onClick={() => onRemoveBike(bike.id)}
@@ -220,7 +219,6 @@ const Comparator: React.FC<ComparatorProps> = ({ bikes, onRemoveBike }) => {
               ))}
             </div>
           </div>
-        </div>
 
         {/* Clear All Button */}
         {bikes.length > 0 && (

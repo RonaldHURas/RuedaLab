@@ -10,7 +10,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-rose-50 via-white to-rose-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 pt-20 transition-colors duration-300"
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-rose-50 via-white to-rose-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 pt-20 transition-colors duration-300"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
@@ -19,16 +19,16 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         }}/>
       </div>
 
-      <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 py-8 md:py-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left space-y-8 animate-fade-in">
-            <div className="inline-flex items-center space-x-2 bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 px-4 py-2 rounded-full text-sm font-medium transition-colors">
-              <Award className="w-4 h-4" />
+          <div className="text-center lg:text-left space-y-6 md:space-y-8 animate-fade-in">
+            <div className="inline-flex items-center space-x-2 bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-colors">
+              <Award className="w-3 h-3 md:w-4 md:h-4" />
               <span>La mejor selección de ciclismo en España</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight font-sans transition-colors">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight font-sans transition-colors">
               Tu próxima
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-rose-700 dark:from-rose-400 dark:to-rose-600">
                 aventura
@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               comienza aquí
             </h1>
 
-            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl font-sans transition-colors">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans transition-colors">
               Descubre nuestra amplia gama de bicicletas para todas las modalidades.
               Desde montaña y carretera hasta urbana y gravel, tenemos la bici ideal para ti.
             </p>

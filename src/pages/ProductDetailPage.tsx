@@ -84,16 +84,16 @@ const ProductDetailPage: React.FC = () => {
         </button>
 
         {/* Product Detail */}
-        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden transition-colors">
-          <div className="grid lg:grid-cols-2 gap-8 p-6 lg:p-12">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 transition-colors">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 md:p-8 lg:p-12">
             {/* Left Column - Image Gallery */}
             <div className="space-y-4">
               {/* Main Image */}
-              <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
+              <div className="relative rounded-xl overflow-hidden aspect-square md:aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                 <img
                   src={allImages[currentImageIndex]}
                   alt={`${bike.name} - Imagen ${currentImageIndex + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain md:object-cover"
                 />
 
                 {/* Navigation Arrows - Only show if multiple images */}

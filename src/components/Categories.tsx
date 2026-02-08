@@ -34,38 +34,38 @@ const Categories: React.FC<CategoriesProps> = ({ selectedCategory, onSelectCateg
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-3 sm:gap-4">
           {/* All Categories Button */}
           <button
             onClick={() => onSelectCategory('all')}
-            className={`p-6 rounded-xl transition-all duration-300 ${
+            className={`p-3 sm:p-6 rounded-xl transition-all duration-300 ${
               selectedCategory === 'all' ? activeClass : inactiveClass
             }`}
           >
-            <div className="flex flex-col items-center space-y-3">
+            <div className="flex flex-col items-center space-y-2 sm:space-y-3">
               <div
-                className={`p-4 rounded-full transition-colors ${
+                className={`p-3 sm:p-4 rounded-full transition-colors ${
                   selectedCategory === 'all'
                     ? 'bg-white/20'
                     : 'bg-rose-100 dark:bg-rose-900/30'
                 }`}
               >
                 <Mountain
-                  className={`w-8 h-8 ${
+                  className={`w-6 h-6 sm:w-8 sm:h-8 ${
                     selectedCategory === 'all' ? 'text-white' : 'text-rose-600 dark:text-rose-400'
                   }`}
                 />
               </div>
               <div className="text-center">
-                <h3 className="font-semibold text-lg mb-1">Todas</h3>
+                <h3 className="font-semibold text-sm sm:text-lg mb-0.5 sm:mb-1">Todas</h3>
                 <p
-                  className={`text-sm ${
+                  className={`text-[10px] sm:text-sm ${
                     selectedCategory === 'all'
                       ? 'text-white/90'
                       : 'text-gray-600 dark:text-gray-400'
                   }`}
                 >
-                  Ver todo el catálogo
+                  Ver catálogo
                 </p>
               </div>
             </div>
@@ -78,26 +78,43 @@ const Categories: React.FC<CategoriesProps> = ({ selectedCategory, onSelectCateg
               <button
                 key={category.id}
                 onClick={() => onSelectCategory(category.id)}
-                className={`p-6 rounded-xl transition-all duration-300 ${
+                className={`p-3 sm:p-6 rounded-xl transition-all duration-300 ${
                   selectedCategory === category.id ? activeClass : inactiveClass
                 }`}
               >
-                <div className="flex flex-col items-center space-y-3">
+                <div className="flex flex-col items-center space-y-2 sm:space-y-3">
                   <div
-                    className={`p-4 rounded-full transition-colors ${
+                    className={`p-3 sm:p-4 rounded-full transition-colors ${
                       selectedCategory === category.id
                         ? 'bg-white/20'
                         : 'bg-rose-100 dark:bg-rose-900/30'
                     }`}
                   >
                     <IconComponent
-                      className={`w-8 h-8 ${
+                      className={`w-6 h-6 sm:w-8 sm:h-8 ${
                         selectedCategory === category.id
                           ? 'text-white'
                           : 'text-rose-600 dark:text-rose-400'
                       }`}
                     />
                   </div>
+                  <div className="text-center">
+                    <h3 className="font-semibold text-sm sm:text-lg mb-0.5 sm:mb-1">{category.name}</h3>
+                    <p
+                      className={`text-[10px] sm:text-sm ${
+                        selectedCategory === category.id
+                          ? 'text-white/90'
+                          : 'text-gray-600 dark:text-gray-400'
+                      }`}
+                    >
+                      Bicis {category.name}
+                    </p>
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
                   <div className="text-center">
                     <h3 className="font-semibold text-lg mb-1">
                       {category.name}
