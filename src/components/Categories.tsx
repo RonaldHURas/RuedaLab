@@ -18,7 +18,6 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const Categories: React.FC<CategoriesProps> = ({ selectedCategory, onSelectCategory }) => {
-  // Use solid colors instead of gradients to ensure visibility
   const activeClass = "bg-rose-600 text-white shadow-lg scale-105";
   const inactiveClass = "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:shadow-md hover:scale-102 border border-gray-200 dark:border-gray-700";
 
@@ -29,7 +28,7 @@ const Categories: React.FC<CategoriesProps> = ({ selectedCategory, onSelectCateg
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">
             Categorías
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors text-sm sm:text-base">
             Encuentra la bicicleta perfecta según tu estilo de ciclismo
           </p>
         </div>
@@ -73,7 +72,7 @@ const Categories: React.FC<CategoriesProps> = ({ selectedCategory, onSelectCateg
 
           {/* Category Buttons */}
           {categories.map((category) => {
-            const IconComponent = iconMap[category.icon];
+            const IconComponent = iconMap[category.icon] || Mountain;
             return (
               <button
                 key={category.id}
@@ -108,25 +107,6 @@ const Categories: React.FC<CategoriesProps> = ({ selectedCategory, onSelectCateg
                       }`}
                     >
                       Bicis {category.name}
-                    </p>
-                  </div>
-                </div>
-              </button>
-            );
-          })}
-        </div>
-                  <div className="text-center">
-                    <h3 className="font-semibold text-lg mb-1">
-                      {category.name}
-                    </h3>
-                    <p
-                      className={`text-sm ${
-                        selectedCategory === category.id
-                          ? 'text-white/90'
-                          : 'text-gray-600'
-                      }`}
-                    >
-                      {category.description}
                     </p>
                   </div>
                 </div>
