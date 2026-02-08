@@ -40,13 +40,13 @@ const HomePage: React.FC = () => {
         <section className="py-16 bg-gradient-to-br from-rose-50 to-orange-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center bg-gradient-to-r from-rose-600 to-orange-600 text-white px-6 py-3 rounded-full mb-4 animate-pulse">
-                <span className="text-2xl font-black">⚡ SUPER OFERTAS ⚡</span>
+              <div className="inline-flex items-center justify-center bg-gradient-to-r from-rose-600 to-orange-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full mb-4 animate-pulse">
+                <span className="text-lg sm:text-2xl font-black">⚡ SUPER OFERTAS ⚡</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">
                 ¡Ahorra €300 adicionales!
               </h2>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg transition-colors">
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-base sm:text-lg transition-colors">
                 Ofertas limitadas en nuestros modelos más exclusivos
               </p>
             </div>
@@ -111,12 +111,12 @@ const HomePage: React.FC = () => {
       {/* Featured Section */}
       <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4 transition-colors">
                 Destacados de la Temporada
               </h2>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl transition-colors">
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl transition-colors text-sm sm:text-base">
                 Las bicicletas más buscadas por nuestros ciclistas expertos.
               </p>
             </div>
